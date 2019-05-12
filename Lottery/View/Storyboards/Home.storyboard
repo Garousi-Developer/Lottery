@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hSI-xz-4hA">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="WBE-tO-ERe">
+            <objects>
+                <viewController id="hSI-xz-4hA" userLabel="View Controller" customClass="HomeViewController" customModule="Lottery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkN-A1-jIo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-KJ-sP2" userLabel="Home Table View" customClass="TableView" customModule="Lottery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pager" rowHeight="500" id="R6k-Un-VSr" userLabel="Static Cell" customClass="StaticTableCell" customModule="Lottery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="500"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R6k-Un-VSr" id="0EH-7r-LTI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPH-7T-ydC" userLabel="Slider Pager View" customClass="PagerView" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="qPH-7T-ydC" secondAttribute="height" multiplier="2:1" id="SnD-zL-cHi"/>
+                                                    </constraints>
+                                                </view>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRS-O4-Bj0" userLabel="Last Chances Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="223" width="382" height="19.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="large"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="lastChances"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ult-06-CL8" userLabel="Last Chances Collection View" customClass="CollectionView" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="242.66666666666663" width="414" height="257"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="257" id="DJI-IF-vf9"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="Qo7-Br-09t" userLabel="Flow Layout">
+                                                        <size key="itemSize" width="175" height="225"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusable" id="PgM-bm-jFe" userLabel="Cell" customClass="LastChanceCollectionCell" customModule="Lottery" customModuleProvider="target">
+                                                            <rect key="frame" x="16" y="16" width="175" height="225"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="225"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0r-c7-UDt" userLabel="Product Name Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="16" y="15.999999999999998" width="143" height="20.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="semiDarkAsset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHq-PW-IE4" userLabel="Product Price Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="16" y="44.333333333333336" width="143" height="20.333333333333336"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="green"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lastChances1" translatesAutoresizingMaskIntoConstraints="NO" id="0uS-lg-09S" userLabel="Picture Image View" customClass="ImageView" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="16" y="80.666666666666671" width="143" height="50.000000000000014"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="Ow3-Of-cGB"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS6-29-lSo" userLabel="Prize Name Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="66.666666666666671" y="146.66666666666666" width="41.666666666666671" height="20.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-Sh-eBy" userLabel="Progress Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="66.666666666666671" y="175" width="41.666666666666671" height="20.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="small"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTg-gP-7Rv" userLabel="Progress Placeholder View" customClass="View" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="16" y="195.33333333333334" width="143" height="6"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="6" id="yWp-sr-lw1"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="placeholder"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sm8-P9-S31" userLabel="Progress View" customClass="View" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="16" y="195.33333333333334" width="0.0" height="6"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" id="WkJ-AU-fk2"/>
+                                                                        </constraints>
+                                                                        <connections>
+                                                                            <outlet property="widthConstraint" destination="WkJ-AU-fk2" id="Oif-18-AMc"/>
+                                                                        </connections>
+                                                                    </view>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VS6-29-lSo" secondAttribute="trailing" constant="16" id="4fA-dK-qoe"/>
+                                                                <constraint firstItem="VS6-29-lSo" firstAttribute="centerX" secondItem="PgM-bm-jFe" secondAttribute="centerX" id="6ce-k4-Qgf"/>
+                                                                <constraint firstItem="zHq-PW-IE4" firstAttribute="top" secondItem="q0r-c7-UDt" secondAttribute="bottom" constant="8" id="88x-Ip-Xjl"/>
+                                                                <constraint firstItem="VS6-29-lSo" firstAttribute="top" secondItem="0uS-lg-09S" secondAttribute="bottom" constant="16" id="CDF-aA-1vG"/>
+                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="leading" secondItem="TTg-gP-7Rv" secondAttribute="leading" id="ESF-Eq-zdj"/>
+                                                                <constraint firstItem="q0r-c7-UDt" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="MgF-fV-ZsZ"/>
+                                                                <constraint firstItem="TTg-gP-7Rv" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="N0R-cb-fpH"/>
+                                                                <constraint firstItem="zHq-PW-IE4" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="Rdq-C8-WzK"/>
+                                                                <constraint firstItem="0uS-lg-09S" firstAttribute="top" secondItem="zHq-PW-IE4" secondAttribute="bottom" constant="16" id="SZF-Ov-BOH"/>
+                                                                <constraint firstItem="Vb2-Sh-eBy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="8" id="VFL-U8-WzV"/>
+                                                                <constraint firstAttribute="trailing" secondItem="TTg-gP-7Rv" secondAttribute="trailing" constant="16" id="Wbd-sg-GdM"/>
+                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="top" secondItem="TTg-gP-7Rv" secondAttribute="top" id="ZkN-i2-0KT"/>
+                                                                <constraint firstItem="q0r-c7-UDt" firstAttribute="top" secondItem="PgM-bm-jFe" secondAttribute="top" constant="16" id="ax8-Jg-cGA"/>
+                                                                <constraint firstItem="0uS-lg-09S" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="dX0-Dh-Dzn"/>
+                                                                <constraint firstItem="VS6-29-lSo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="dok-a3-BVZ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="zHq-PW-IE4" secondAttribute="trailing" constant="16" id="hIn-lD-2A8"/>
+                                                                <constraint firstItem="Vb2-Sh-eBy" firstAttribute="top" secondItem="VS6-29-lSo" secondAttribute="bottom" constant="8" id="hSC-K9-H3q"/>
+                                                                <constraint firstItem="TTg-gP-7Rv" firstAttribute="top" secondItem="Vb2-Sh-eBy" secondAttribute="bottom" id="iSg-AB-Jjh"/>
+                                                                <constraint firstItem="Vb2-Sh-eBy" firstAttribute="centerX" secondItem="PgM-bm-jFe" secondAttribute="centerX" id="pVX-Im-uPt"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vb2-Sh-eBy" secondAttribute="trailing" constant="8" id="vFH-Ym-tiJ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="q0r-c7-UDt" secondAttribute="trailing" constant="16" id="vQw-qs-jLU"/>
+                                                                <constraint firstAttribute="trailing" secondItem="0uS-lg-09S" secondAttribute="trailing" constant="16" id="x46-za-hfj"/>
+                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="bottom" secondItem="TTg-gP-7Rv" secondAttribute="bottom" id="yAv-Jh-JBe"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstShadowStyle" value="normal"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="medium"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="white"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="pictureImageView" destination="0uS-lg-09S" id="G7E-Db-Qun"/>
+                                                                <outlet property="prizeNameLabel" destination="VS6-29-lSo" id="Jh0-yE-qgB"/>
+                                                                <outlet property="productNameLabel" destination="q0r-c7-UDt" id="4Rl-JG-kGH"/>
+                                                                <outlet property="productPriceLabel" destination="zHq-PW-IE4" id="f1K-mG-ZZ2"/>
+                                                                <outlet property="progressLabel" destination="Vb2-Sh-eBy" id="FkI-gN-2uc"/>
+                                                                <outlet property="progressPlaceholderView" destination="TTg-gP-7Rv" id="ymN-eK-C0Y"/>
+                                                                <outlet property="progressView" destination="sm8-P9-S31" id="eNB-Tz-uyq"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="firstCellsPerRow">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ult-06-CL8" firstAttribute="top" secondItem="SRS-O4-Bj0" secondAttribute="bottom" id="2bv-te-QKV"/>
+                                                <constraint firstItem="Ult-06-CL8" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" id="65H-nu-luD"/>
+                                                <constraint firstItem="qPH-7T-ydC" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" id="L3v-9c-3Vi"/>
+                                                <constraint firstItem="SRS-O4-Bj0" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" constant="16" id="eKC-Cm-79S"/>
+                                                <constraint firstItem="SRS-O4-Bj0" firstAttribute="top" secondItem="qPH-7T-ydC" secondAttribute="bottom" constant="16" id="j40-9y-LUm"/>
+                                                <constraint firstAttribute="trailing" secondItem="SRS-O4-Bj0" secondAttribute="trailing" constant="16" id="jKX-DR-q1Z"/>
+                                                <constraint firstItem="qPH-7T-ydC" firstAttribute="top" secondItem="0EH-7r-LTI" secondAttribute="top" id="m2d-Nw-PbS"/>
+                                                <constraint firstAttribute="trailing" secondItem="qPH-7T-ydC" secondAttribute="trailing" id="oNH-z8-IRf"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ult-06-CL8" secondAttribute="bottom" id="sZH-SV-kvP"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ult-06-CL8" secondAttribute="trailing" id="u3A-Jz-nCI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lastChancesCollectionView" destination="Ult-06-CL8" id="rnr-5B-YML"/>
+                                            <outlet property="lastChancesLabel" destination="SRS-O4-Bj0" id="ffC-yY-iBm"/>
+                                            <outlet property="sliderPagerView" destination="qPH-7T-ydC" id="SeF-eG-uyV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="firstSimplifying" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dwP-KJ-sP2" firstAttribute="top" secondItem="h77-Px-0pm" secondAttribute="top" id="0Pu-AZ-JVY"/>
+                            <constraint firstItem="h77-Px-0pm" firstAttribute="trailing" secondItem="dwP-KJ-sP2" secondAttribute="trailing" id="YDu-tS-R16"/>
+                            <constraint firstItem="dwP-KJ-sP2" firstAttribute="leading" secondItem="h77-Px-0pm" secondAttribute="leading" id="bAk-8W-qzf"/>
+                            <constraint firstItem="h77-Px-0pm" firstAttribute="bottom" secondItem="dwP-KJ-sP2" secondAttribute="bottom" id="bhe-mI-Wpd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h77-Px-0pm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="SH5-sn-cPz" userLabel="Navigation Item" customClass="NavigationItem" customModule="Lottery" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="firstTitle" value="home"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeTableView" destination="dwP-KJ-sP2" id="NVc-7y-OKG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BM7-cC-mPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.57971014492756" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lastChances1" width="134" height="62.333332061767578"/>
+    </resources>
+</document>
