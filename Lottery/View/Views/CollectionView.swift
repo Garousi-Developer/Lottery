@@ -2,7 +2,10 @@ import UIKit
 
 @IBDesignable
 class CollectionView: UICollectionView {
-    @IBInspectable var firstCellsPerRow: Int = 1
+    @IBInspectable var firstCellsPerPage: Int = 1
+    
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -21,7 +24,7 @@ class CollectionView: UICollectionView {
 
 extension CollectionView {
     private func setup() {
-        semanticContentAttribute = .forceRightToLeft
+//        semanticContentAttribute = .forceRightToLeft
         
         if let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout {
             switch flowLayout.scrollDirection {
@@ -29,7 +32,7 @@ extension CollectionView {
                 alwaysBounceHorizontal = false
             case .vertical:
                 // Align scroll indicator right.
-                scrollIndicatorInsets = UIEdgeInsets(top: 0, left: bounds.width, bottom: 0, right: 0)
+//                scrollIndicatorInsets = UIEdgeInsets(top: 0, left: bounds.width, bottom: 0, right: 0)
                 
                 alwaysBounceVertical = true
             @unknown default:

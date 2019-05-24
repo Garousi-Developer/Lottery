@@ -2,12 +2,17 @@ import UIKit
 
 extension UIView {
     func setBorderStyle(_ borderStyle: BorderStyle) {
+        layer.setBorderStyle(borderStyle)
+    }
+}
+extension CALayer {
+    func setBorderStyle(_ borderStyle: BorderStyle) {
         switch borderStyle {
         case .none:
-            layer.borderWidth = 0
+            borderWidth = 0
         case .normal:
-            layer.borderWidth = 1
-            layer.borderColor = colors(.line).cgColor
+            borderWidth = 1
+            borderColor = colors(.line).cgColor
         }
     }
 }

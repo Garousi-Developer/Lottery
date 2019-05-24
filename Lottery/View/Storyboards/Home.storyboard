@@ -22,22 +22,22 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pager" rowHeight="500" id="R6k-Un-VSr" userLabel="Static Cell" customClass="StaticTableCell" customModule="Lottery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="500"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="topStatic" rowHeight="650" id="R6k-Un-VSr" userLabel="Top Static Cell" customClass="TopStaticTableCell" customModule="Lottery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="650"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R6k-Un-VSr" id="0EH-7r-LTI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPH-7T-ydC" userLabel="Slider Pager View" customClass="PagerView" customModule="Lottery" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="qPH-7T-ydC" secondAttribute="height" multiplier="2:1" id="SnD-zL-cHi"/>
+                                                        <constraint firstAttribute="width" secondItem="qPH-7T-ydC" secondAttribute="height" multiplier="1242:660" id="SnD-zL-cHi"/>
                                                     </constraints>
                                                 </view>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRS-O4-Bj0" userLabel="Last Chances Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="223" width="382" height="19.666666666666657"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRS-O4-Bj0" userLabel="Last Chances Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="232" width="390" height="41.666666666666686"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -47,38 +47,41 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="lastChances"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ult-06-CL8" userLabel="Last Chances Collection View" customClass="CollectionView" customModule="Lottery" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="242.66666666666663" width="414" height="257"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ult-06-CL8" userLabel="Last Chances Collection View" customClass="CollectionView" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="273.66666666666669" width="414" height="232"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="257" id="DJI-IF-vf9"/>
+                                                        <constraint firstAttribute="height" constant="232" id="DJI-IF-vf9"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="Qo7-Br-09t" userLabel="Flow Layout">
-                                                        <size key="itemSize" width="175" height="225"/>
+                                                        <size key="itemSize" width="175" height="200"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusable" id="PgM-bm-jFe" userLabel="Cell" customClass="LastChanceCollectionCell" customModule="Lottery" customModuleProvider="target">
-                                                            <rect key="frame" x="16" y="16" width="175" height="225"/>
+                                                            <rect key="frame" x="16" y="16" width="175" height="200"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="225"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0r-c7-UDt" userLabel="Product Name Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
-                                                                        <rect key="frame" x="16" y="15.999999999999998" width="143" height="20.333333333333329"/>
+                                                                        <rect key="frame" x="12" y="12.000000000000002" width="151" height="19.666666666666671"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="semiDarkAsset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="asset"/>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="firstNumberOfLines">
+                                                                                <integer key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHq-PW-IE4" userLabel="Product Price Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
-                                                                        <rect key="frame" x="16" y="44.333333333333336" width="143" height="20.333333333333336"/>
+                                                                        <rect key="frame" x="12" y="37.666666666666664" width="151" height="19.666666666666664"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -87,37 +90,42 @@
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lastChances1" translatesAutoresizingMaskIntoConstraints="NO" id="0uS-lg-09S" userLabel="Picture Image View" customClass="ImageView" customModule="Lottery" customModuleProvider="target">
-                                                                        <rect key="frame" x="16" y="80.666666666666671" width="143" height="50.000000000000014"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testLastChance1" translatesAutoresizingMaskIntoConstraints="NO" id="0uS-lg-09S" userLabel="Picture Image View" customClass="ImageView" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="69.333333333333329" width="151" height="40"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="Ow3-Of-cGB"/>
+                                                                            <constraint firstAttribute="height" constant="40" id="Ow3-Of-cGB" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS6-29-lSo" userLabel="Prize Name Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
-                                                                        <rect key="frame" x="66.666666666666671" y="146.66666666666666" width="41.666666666666671" height="20.333333333333343"/>
+                                                                        <rect key="frame" x="6" y="121.33333333333333" width="163" height="19.666666666666671"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="firstNumberOfLines">
+                                                                                <integer key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-Sh-eBy" userLabel="Progress Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
-                                                                        <rect key="frame" x="66.666666666666671" y="175" width="41.666666666666671" height="20.333333333333343"/>
+                                                                        <rect key="frame" x="12" y="153" width="151" height="20.333333333333343"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="small"/>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTg-gP-7Rv" userLabel="Progress Placeholder View" customClass="View" customModule="Lottery" customModuleProvider="target">
-                                                                        <rect key="frame" x="16" y="195.33333333333334" width="143" height="6"/>
+                                                                        <rect key="frame" x="12" y="179.33333333333334" width="151" height="5"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="6" id="yWp-sr-lw1"/>
+                                                                            <constraint firstAttribute="height" constant="5" id="yWp-sr-lw1" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
@@ -125,11 +133,15 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sm8-P9-S31" userLabel="Progress View" customClass="View" customModule="Lottery" customModuleProvider="target">
-                                                                        <rect key="frame" x="16" y="195.33333333333334" width="0.0" height="6"/>
+                                                                        <rect key="frame" x="12" y="179.33333333333334" width="50" height="5"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" id="WkJ-AU-fk2"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="WkJ-AU-fk2"/>
                                                                         </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="green"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <outlet property="widthConstraint" destination="WkJ-AU-fk2" id="Oif-18-AMc"/>
                                                                         </connections>
@@ -137,29 +149,27 @@
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VS6-29-lSo" secondAttribute="trailing" constant="16" id="4fA-dK-qoe"/>
-                                                                <constraint firstItem="VS6-29-lSo" firstAttribute="centerX" secondItem="PgM-bm-jFe" secondAttribute="centerX" id="6ce-k4-Qgf"/>
-                                                                <constraint firstItem="zHq-PW-IE4" firstAttribute="top" secondItem="q0r-c7-UDt" secondAttribute="bottom" constant="8" id="88x-Ip-Xjl"/>
-                                                                <constraint firstItem="VS6-29-lSo" firstAttribute="top" secondItem="0uS-lg-09S" secondAttribute="bottom" constant="16" id="CDF-aA-1vG"/>
-                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="leading" secondItem="TTg-gP-7Rv" secondAttribute="leading" id="ESF-Eq-zdj"/>
-                                                                <constraint firstItem="q0r-c7-UDt" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="MgF-fV-ZsZ"/>
-                                                                <constraint firstItem="TTg-gP-7Rv" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="N0R-cb-fpH"/>
-                                                                <constraint firstItem="zHq-PW-IE4" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="Rdq-C8-WzK"/>
-                                                                <constraint firstItem="0uS-lg-09S" firstAttribute="top" secondItem="zHq-PW-IE4" secondAttribute="bottom" constant="16" id="SZF-Ov-BOH"/>
-                                                                <constraint firstItem="Vb2-Sh-eBy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="8" id="VFL-U8-WzV"/>
-                                                                <constraint firstAttribute="trailing" secondItem="TTg-gP-7Rv" secondAttribute="trailing" constant="16" id="Wbd-sg-GdM"/>
-                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="top" secondItem="TTg-gP-7Rv" secondAttribute="top" id="ZkN-i2-0KT"/>
-                                                                <constraint firstItem="q0r-c7-UDt" firstAttribute="top" secondItem="PgM-bm-jFe" secondAttribute="top" constant="16" id="ax8-Jg-cGA"/>
-                                                                <constraint firstItem="0uS-lg-09S" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="dX0-Dh-Dzn"/>
-                                                                <constraint firstItem="VS6-29-lSo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="16" id="dok-a3-BVZ"/>
-                                                                <constraint firstAttribute="trailing" secondItem="zHq-PW-IE4" secondAttribute="trailing" constant="16" id="hIn-lD-2A8"/>
-                                                                <constraint firstItem="Vb2-Sh-eBy" firstAttribute="top" secondItem="VS6-29-lSo" secondAttribute="bottom" constant="8" id="hSC-K9-H3q"/>
-                                                                <constraint firstItem="TTg-gP-7Rv" firstAttribute="top" secondItem="Vb2-Sh-eBy" secondAttribute="bottom" id="iSg-AB-Jjh"/>
-                                                                <constraint firstItem="Vb2-Sh-eBy" firstAttribute="centerX" secondItem="PgM-bm-jFe" secondAttribute="centerX" id="pVX-Im-uPt"/>
-                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vb2-Sh-eBy" secondAttribute="trailing" constant="8" id="vFH-Ym-tiJ"/>
-                                                                <constraint firstAttribute="trailing" secondItem="q0r-c7-UDt" secondAttribute="trailing" constant="16" id="vQw-qs-jLU"/>
-                                                                <constraint firstAttribute="trailing" secondItem="0uS-lg-09S" secondAttribute="trailing" constant="16" id="x46-za-hfj"/>
-                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="bottom" secondItem="TTg-gP-7Rv" secondAttribute="bottom" id="yAv-Jh-JBe"/>
+                                                                <constraint firstAttribute="trailing" secondItem="VS6-29-lSo" secondAttribute="trailing" constant="6" id="4fA-dK-qoe" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="zHq-PW-IE4" firstAttribute="top" secondItem="q0r-c7-UDt" secondAttribute="bottom" constant="6" id="88x-Ip-Xjl" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="VS6-29-lSo" firstAttribute="top" secondItem="0uS-lg-09S" secondAttribute="bottom" constant="12" id="CDF-aA-1vG" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="leading" secondItem="TTg-gP-7Rv" secondAttribute="leading" id="ESF-Eq-zdj" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="q0r-c7-UDt" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="12" id="MgF-fV-ZsZ" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="TTg-gP-7Rv" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="12" id="N0R-cb-fpH" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="zHq-PW-IE4" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="12" id="Rdq-C8-WzK" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="0uS-lg-09S" firstAttribute="top" secondItem="zHq-PW-IE4" secondAttribute="bottom" constant="12" id="SZF-Ov-BOH" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="Vb2-Sh-eBy" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="12" id="VFL-U8-WzV" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="TTg-gP-7Rv" secondAttribute="trailing" constant="12" id="Wbd-sg-GdM" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="top" secondItem="TTg-gP-7Rv" secondAttribute="top" id="ZkN-i2-0KT" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="q0r-c7-UDt" firstAttribute="top" secondItem="PgM-bm-jFe" secondAttribute="top" constant="12" id="ax8-Jg-cGA" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="0uS-lg-09S" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="12" id="dX0-Dh-Dzn" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="VS6-29-lSo" firstAttribute="leading" secondItem="PgM-bm-jFe" secondAttribute="leading" constant="6" id="dok-a3-BVZ" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="zHq-PW-IE4" secondAttribute="trailing" constant="12" id="hIn-lD-2A8" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="Vb2-Sh-eBy" firstAttribute="top" secondItem="VS6-29-lSo" secondAttribute="bottom" constant="12" id="hSC-K9-H3q" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="TTg-gP-7Rv" firstAttribute="top" secondItem="Vb2-Sh-eBy" secondAttribute="bottom" constant="6" id="iSg-AB-Jjh" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Vb2-Sh-eBy" secondAttribute="trailing" constant="12" id="vFH-Ym-tiJ" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="q0r-c7-UDt" secondAttribute="trailing" constant="12" id="vQw-qs-jLU" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="0uS-lg-09S" secondAttribute="trailing" constant="12" id="x46-za-hfj" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="sm8-P9-S31" firstAttribute="bottom" secondItem="TTg-gP-7Rv" secondAttribute="bottom" id="yAv-Jh-JBe" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="string" keyPath="firstShadowStyle" value="normal"/>
@@ -178,29 +188,650 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="firstCellsPerRow">
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="firstCellsPerPage">
                                                             <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="heightConstraint" destination="DJI-IF-vf9" id="0a2-Nu-50o"/>
+                                                    </connections>
                                                 </collectionView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testGlobalAd" translatesAutoresizingMaskIntoConstraints="NO" id="0ib-7Y-fgN" userLabel="Global Ad Image View" customClass="ImageView" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="511.66666666666674" width="390" height="132"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="0ib-7Y-fgN" secondAttribute="height" multiplier="1152:390" id="Qjm-yd-MbL"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="medium"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ult-06-CL8" firstAttribute="top" secondItem="SRS-O4-Bj0" secondAttribute="bottom" id="2bv-te-QKV"/>
-                                                <constraint firstItem="Ult-06-CL8" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" id="65H-nu-luD"/>
-                                                <constraint firstItem="qPH-7T-ydC" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" id="L3v-9c-3Vi"/>
-                                                <constraint firstItem="SRS-O4-Bj0" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" constant="16" id="eKC-Cm-79S"/>
-                                                <constraint firstItem="SRS-O4-Bj0" firstAttribute="top" secondItem="qPH-7T-ydC" secondAttribute="bottom" constant="16" id="j40-9y-LUm"/>
-                                                <constraint firstAttribute="trailing" secondItem="SRS-O4-Bj0" secondAttribute="trailing" constant="16" id="jKX-DR-q1Z"/>
-                                                <constraint firstItem="qPH-7T-ydC" firstAttribute="top" secondItem="0EH-7r-LTI" secondAttribute="top" id="m2d-Nw-PbS"/>
-                                                <constraint firstAttribute="trailing" secondItem="qPH-7T-ydC" secondAttribute="trailing" id="oNH-z8-IRf"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ult-06-CL8" secondAttribute="bottom" id="sZH-SV-kvP"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ult-06-CL8" secondAttribute="trailing" id="u3A-Jz-nCI"/>
+                                                <constraint firstItem="Ult-06-CL8" firstAttribute="top" secondItem="SRS-O4-Bj0" secondAttribute="bottom" id="2bv-te-QKV" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="Ult-06-CL8" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" id="65H-nu-luD" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="qPH-7T-ydC" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" id="L3v-9c-3Vi" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="bottom" secondItem="0ib-7Y-fgN" secondAttribute="bottom" constant="6" id="TKn-Ow-QgF" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="0ib-7Y-fgN" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" constant="12" id="aLt-3P-xUF" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="0ib-7Y-fgN" secondAttribute="trailing" constant="12" id="aN1-8w-AM3" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="SRS-O4-Bj0" firstAttribute="leading" secondItem="0EH-7r-LTI" secondAttribute="leading" constant="12" id="eKC-Cm-79S" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="SRS-O4-Bj0" firstAttribute="top" secondItem="qPH-7T-ydC" secondAttribute="bottom" constant="12" id="j40-9y-LUm" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="SRS-O4-Bj0" secondAttribute="trailing" constant="12" id="jKX-DR-q1Z" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="qPH-7T-ydC" firstAttribute="top" secondItem="0EH-7r-LTI" secondAttribute="top" id="m2d-Nw-PbS" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="qPH-7T-ydC" secondAttribute="trailing" id="oNH-z8-IRf" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="0ib-7Y-fgN" firstAttribute="top" secondItem="Ult-06-CL8" secondAttribute="bottom" constant="6" id="tK2-qi-owo" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ult-06-CL8" secondAttribute="trailing" id="u3A-Jz-nCI" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="globalAdImageView" destination="0ib-7Y-fgN" id="K8h-kE-QM5"/>
                                             <outlet property="lastChancesCollectionView" destination="Ult-06-CL8" id="rnr-5B-YML"/>
                                             <outlet property="lastChancesLabel" destination="SRS-O4-Bj0" id="ffC-yY-iBm"/>
                                             <outlet property="sliderPagerView" destination="qPH-7T-ydC" id="SeF-eG-uyV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dynamic" rowHeight="450" id="JLB-7Q-drR" userLabel="Dynamic Cell" customClass="DynamicTableCell" customModule="Lottery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="678" width="414" height="450"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JLB-7Q-drR" id="AvB-lJ-iFV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHJ-Ht-NhC" userLabel="Title Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="6" width="390" height="86.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="extraLarge"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PHH-tO-GJR" userLabel="Lotteries Collection View" customClass="CollectionView" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="92.666666666666686" width="414" height="357"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="357" id="C6P-Hy-BqF"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="y2J-9n-Ize" userLabel="Flow Layout">
+                                                        <size key="itemSize" width="366" height="325"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusable" id="cOS-6J-plJ" userLabel="Cell" customClass="LotteryCollectionCell" customModule="Lottery" customModuleProvider="target">
+                                                            <rect key="frame" x="16" y="16" width="366" height="325"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="325"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UI-Ay-Frc" userLabel="Favorite Button" customClass="Button" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="6" y="6" width="36" height="36"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="36" id="iek-Cc-knp"/>
+                                                                            <constraint firstAttribute="height" constant="36" id="n8v-W3-lfY"/>
+                                                                        </constraints>
+                                                                        <state key="normal" title="Button" image="favorites"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTintColor" value="asset"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testLottery1" translatesAutoresizingMaskIntoConstraints="NO" id="kSL-qo-3qa" userLabel="Picture Image View" customClass="ImageView" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="54" y="12" width="294" height="115"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="115" id="3Eg-vc-UxU" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kau-V8-oEk" userLabel="Product Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="139" width="342" height="20.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="asset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuU-wm-2Mb" userLabel="Add To Cart Button" customClass="Button" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="125.66666666666669" y="171.33333333333334" width="115" height="35"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="35" id="4js-Lx-yER" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstAttribute="width" constant="115" id="oUv-DL-qi2" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                        </constraints>
+                                                                        <state key="normal" title="Button" image="cart"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="primary"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTintColor" value="white"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTitleColor" value="white"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="addToCart"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LWM-iy-zhS" userLabel="Order Count Stack View" customClass="StackView" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="82.666666666666686" y="171.33333333333334" width="201" height="35"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wma-bQ-8JL" userLabel="Decrement Button" customClass="Button" customModule="Lottery" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="35" id="Xz6-Ux-lUF" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                                </constraints>
+                                                                                <state key="normal" title="Button" image="decrement"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="asset"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTintColor" value="white"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </button>
+                                                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRS-bC-z5T" userLabel="Order Count Button" customClass="Button" customModule="Lottery" customModuleProvider="target">
+                                                                                <rect key="frame" x="43" y="0.0" width="35" height="35"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="35" id="FcP-jl-xHw" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                                </constraints>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="asset"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="large"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTitleColor" value="white"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="initialCount"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ife-nd-j0d" userLabel="Increment Button" customClass="Button" customModule="Lottery" customModuleProvider="target">
+                                                                                <rect key="frame" x="86" y="0.0" width="115" height="35"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="115" id="3Dx-C8-LbY" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                                </constraints>
+                                                                                <state key="normal" title="Button" image="cart"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="primary"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTintColor" value="white"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTitleColor" value="white"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="addMore"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLv-6X-mGb" userLabel="Win Chance Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="218.33333333333334" width="342" height="20.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="asset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="getAChanceToWin"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxs-0H-S0y" userLabel="Prize Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="246.66666666666666" width="342" height="20.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="semiLarge"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Tf-SK-ooR" userLabel="Number Of Sold Products Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="6" y="277.33333333333331" width="41.666666666666664" height="20.333333333333314"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="small"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="asset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR2-di-N8Z" userLabel="Progress Placeholder View" customClass="View" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="53.666666666666657" y="285" width="258.66666666666674" height="5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="5" id="MeH-NH-HTD" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="placeholder"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCJ-9H-Aub" userLabel="Progress View" customClass="View" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="53.666666666666664" y="285" width="0.0" height="5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" id="5oz-tw-TTS"/>
+                                                                        </constraints>
+                                                                        <connections>
+                                                                            <outlet property="widthConstraint" destination="5oz-tw-TTS" id="aZD-sB-yO2"/>
+                                                                        </connections>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAE-hr-ijx" userLabel="Number Of Products Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="318.33333333333331" y="277.33333333333331" width="41.666666666666686" height="20.333333333333314"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="small"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="asset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="uAE-hr-ijx" firstAttribute="centerY" secondItem="fR2-di-N8Z" secondAttribute="centerY" id="99f-FW-Mbv" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="KCJ-9H-Aub" firstAttribute="bottom" secondItem="fR2-di-N8Z" secondAttribute="bottom" id="9nE-gD-Ozf" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="LWM-iy-zhS" firstAttribute="bottom" secondItem="QuU-wm-2Mb" secondAttribute="bottom" id="AlF-Pg-LNA" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Kau-V8-oEk" secondAttribute="trailing" constant="12" id="B6w-Lh-JPC" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="LWM-iy-zhS" firstAttribute="top" secondItem="QuU-wm-2Mb" secondAttribute="top" id="Ba2-Mp-ZQo" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="Kau-V8-oEk" firstAttribute="leading" secondItem="cOS-6J-plJ" secondAttribute="leading" constant="12" id="CkB-mA-f0x" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="fR2-di-N8Z" firstAttribute="leading" secondItem="0Tf-SK-ooR" secondAttribute="trailing" constant="6" id="Hy4-yA-41G" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="uAE-hr-ijx" secondAttribute="trailing" constant="6" id="JoJ-5x-mYG" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="6UI-Ay-Frc" firstAttribute="top" secondItem="cOS-6J-plJ" secondAttribute="top" constant="6" id="LlH-fv-ulq" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="cLv-6X-mGb" secondAttribute="trailing" constant="12" id="LlI-f5-jjP" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="dxs-0H-S0y" firstAttribute="leading" secondItem="cOS-6J-plJ" secondAttribute="leading" constant="12" id="LuE-kf-TjU" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="kSL-qo-3qa" firstAttribute="leading" secondItem="6UI-Ay-Frc" secondAttribute="trailing" constant="12" id="M3e-t3-v6C" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="kSL-qo-3qa" firstAttribute="top" secondItem="cOS-6J-plJ" secondAttribute="top" constant="12" id="Qxs-QC-K0t" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="uAE-hr-ijx" firstAttribute="leading" secondItem="fR2-di-N8Z" secondAttribute="trailing" constant="6" id="R0F-Cn-iV4" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="LWM-iy-zhS" firstAttribute="centerX" secondItem="cOS-6J-plJ" secondAttribute="centerX" id="RBu-Sp-wMn" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="0Tf-SK-ooR" firstAttribute="leading" secondItem="cOS-6J-plJ" secondAttribute="leading" constant="6" id="TkP-ml-f5X" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="kSL-qo-3qa" secondAttribute="trailing" constant="18" id="USG-R5-fSC" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="firstConstant">
+                                                                            <real key="value" value="36"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="QuU-wm-2Mb" firstAttribute="centerX" secondItem="cOS-6J-plJ" secondAttribute="centerX" id="aoz-85-cOm" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="KCJ-9H-Aub" firstAttribute="top" secondItem="fR2-di-N8Z" secondAttribute="top" id="e4e-wI-6Mz" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="cLv-6X-mGb" firstAttribute="leading" secondItem="cOS-6J-plJ" secondAttribute="leading" constant="12" id="fAG-My-dQE" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="6UI-Ay-Frc" firstAttribute="leading" secondItem="cOS-6J-plJ" secondAttribute="leading" constant="6" id="gAz-Qr-fNc" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="QuU-wm-2Mb" firstAttribute="top" secondItem="Kau-V8-oEk" secondAttribute="bottom" constant="12" id="hAO-85-6Wd" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="cLv-6X-mGb" firstAttribute="top" secondItem="QuU-wm-2Mb" secondAttribute="bottom" constant="12" id="jyc-hY-5kw" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="dxs-0H-S0y" firstAttribute="top" secondItem="cLv-6X-mGb" secondAttribute="bottom" constant="8" id="k4f-YW-MJp" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="dxs-0H-S0y" secondAttribute="trailing" constant="12" id="pgr-FP-jZO" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="0Tf-SK-ooR" firstAttribute="centerY" secondItem="fR2-di-N8Z" secondAttribute="centerY" id="ub7-gQ-kbu" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="KCJ-9H-Aub" firstAttribute="leading" secondItem="fR2-di-N8Z" secondAttribute="leading" id="y4W-IN-6Qc" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="fR2-di-N8Z" firstAttribute="top" secondItem="dxs-0H-S0y" secondAttribute="bottom" constant="18" id="yJc-do-SiI" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="Kau-V8-oEk" firstAttribute="top" secondItem="kSL-qo-3qa" secondAttribute="bottom" constant="12" id="yL5-Mf-65g" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstShadowStyle" value="normal"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="medium"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="white"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="addToCartButton" destination="QuU-wm-2Mb" id="51i-O9-pPG"/>
+                                                                <outlet property="decrementButton" destination="Wma-bQ-8JL" id="FUA-jE-Yoz"/>
+                                                                <outlet property="favoriteButton" destination="6UI-Ay-Frc" id="LNc-PO-fRQ"/>
+                                                                <outlet property="incrementButton" destination="ife-nd-j0d" id="xHE-6t-LvK"/>
+                                                                <outlet property="numberOfProductsLabel" destination="uAE-hr-ijx" id="Znz-87-d7G"/>
+                                                                <outlet property="numberOfSoldProductsLabel" destination="0Tf-SK-ooR" id="dXE-gY-xni"/>
+                                                                <outlet property="orderCountButton" destination="MRS-bC-z5T" id="e4j-8t-LZb"/>
+                                                                <outlet property="orderCountStackView" destination="LWM-iy-zhS" id="fuY-Q9-zEi"/>
+                                                                <outlet property="pictureImageView" destination="kSL-qo-3qa" id="Vw1-t9-MQl"/>
+                                                                <outlet property="prizeLabel" destination="dxs-0H-S0y" id="oVw-fD-Agn"/>
+                                                                <outlet property="productLabel" destination="Kau-V8-oEk" id="WGl-2W-Fie"/>
+                                                                <outlet property="progressPlaceholderView" destination="fR2-di-N8Z" id="zYd-1W-fd2"/>
+                                                                <outlet property="progressView" destination="KCJ-9H-Aub" id="9cP-v0-d0c"/>
+                                                                <outlet property="winChanceLabel" destination="cLv-6X-mGb" id="Abu-3Y-yZ3"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="heightConstraint" destination="C6P-Hy-BqF" id="pei-ym-oGf"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YHJ-Ht-NhC" secondAttribute="trailing" constant="12" id="Hz3-aV-itb" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="PHH-tO-GJR" firstAttribute="leading" secondItem="AvB-lJ-iFV" secondAttribute="leading" id="JK4-Ym-FoK" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="YHJ-Ht-NhC" firstAttribute="top" secondItem="AvB-lJ-iFV" secondAttribute="top" constant="6" id="Q44-6A-w5r" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="YHJ-Ht-NhC" firstAttribute="leading" secondItem="AvB-lJ-iFV" secondAttribute="leading" constant="12" id="TtE-cz-D8l" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="bottom" secondItem="PHH-tO-GJR" secondAttribute="bottom" id="UzU-Fe-cA8" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="PHH-tO-GJR" secondAttribute="trailing" id="u7z-pm-qen" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="PHH-tO-GJR" firstAttribute="top" secondItem="YHJ-Ht-NhC" secondAttribute="bottom" id="wXd-Qj-K7a" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lotteriesCollectionView" destination="PHH-tO-GJR" id="x0j-pX-gee"/>
+                                            <outlet property="titleLabel" destination="YHJ-Ht-NhC" id="1o1-GF-HqC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bottomStatic" rowHeight="725" id="1K1-yE-dNy" userLabel="Bottom Static Cell" customClass="BottomStaticTableCell" customModule="Lottery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1128" width="414" height="725"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1K1-yE-dNy" id="Yfe-VD-hN6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="724.66666666666663"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdS-mk-HMK" userLabel="Sold Outs Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="6" width="390" height="32.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="extraLarge"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="soldOuts"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-GI-x04" userLabel="Sold Outs Collection View" customClass="CollectionView" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="38.666666666666686" width="414" height="350"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="325" id="oHD-9N-f95"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="NKn-VC-ojr" userLabel="Flow Layout">
+                                                        <size key="itemSize" width="366" height="275"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="16" minY="44" maxX="16" maxY="16"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusable" id="Q9A-qs-AAt" userLabel="Cell" customClass="SoldOutCollectionCell" customModule="Lottery" customModuleProvider="target">
+                                                            <rect key="frame" x="16" y="51.666666666666664" width="366" height="275"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="275"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omm-bh-oJo" userLabel="Sold Out Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="6" y="-27" width="54" height="54"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="54" id="Miy-pj-6Cj" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstAttribute="width" constant="54" id="uhh-5X-2kf" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="red"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="white"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="soldOut"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="semiLarge"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testLottery7" translatesAutoresizingMaskIntoConstraints="NO" id="WVe-q8-aK3" userLabel="Picture Image View" customClass="ImageView" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="66" y="12" width="222" height="115"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="115" id="H7T-ce-S2S" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-Lt-eiL" userLabel="Product Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="139" width="342" height="19.666666666666657"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="asset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oR4-Yr-5CZ" userLabel="Draw Date Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="170.66666666666666" width="342" height="35"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="35" id="PGz-Ty-1T2" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="half"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="lightGrey"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D07-j0-3cl" userLabel="Win Chance Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="217.66666666666666" width="342" height="19.666666666666657"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="asset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="getAChanceToWin"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xok-8e-fJk" userLabel="Prize Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="243.33333333333334" width="342" height="20.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="semiLarge"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="Omm-bh-oJo" firstAttribute="top" secondItem="Q9A-qs-AAt" secondAttribute="top" constant="-27" id="7y4-vw-gtr" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="Fbb-Lt-eiL" firstAttribute="leading" secondItem="Q9A-qs-AAt" secondAttribute="leading" constant="12" id="FlP-kC-PDr" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="D07-j0-3cl" firstAttribute="leading" secondItem="Q9A-qs-AAt" secondAttribute="leading" constant="12" id="GBS-j1-kg6" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="xok-8e-fJk" firstAttribute="top" secondItem="D07-j0-3cl" secondAttribute="bottom" constant="6" id="GCt-yh-w4r" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="WVe-q8-aK3" firstAttribute="top" secondItem="Q9A-qs-AAt" secondAttribute="top" constant="12" id="HmN-Xs-aIK" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="D07-j0-3cl" secondAttribute="trailing" constant="12" id="JMU-W1-cUA" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="oR4-Yr-5CZ" secondAttribute="trailing" constant="12" id="OjJ-6G-Cjr" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="D07-j0-3cl" firstAttribute="top" secondItem="oR4-Yr-5CZ" secondAttribute="bottom" constant="12" id="RZB-Hi-dgW" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="oR4-Yr-5CZ" firstAttribute="leading" secondItem="Q9A-qs-AAt" secondAttribute="leading" constant="12" id="SSc-1k-yJl" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Fbb-Lt-eiL" secondAttribute="trailing" constant="12" id="W9w-in-DUj" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="WVe-q8-aK3" firstAttribute="leading" secondItem="Omm-bh-oJo" secondAttribute="trailing" constant="6" id="Y0k-y0-XE8" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="oR4-Yr-5CZ" firstAttribute="top" secondItem="Fbb-Lt-eiL" secondAttribute="bottom" constant="12" id="e3P-ld-Akw" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="WVe-q8-aK3" secondAttribute="trailing" constant="78" id="fKY-Sg-Pdi" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="xok-8e-fJk" firstAttribute="leading" secondItem="Q9A-qs-AAt" secondAttribute="leading" constant="12" id="hEY-HS-ycO" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="Omm-bh-oJo" firstAttribute="leading" secondItem="Q9A-qs-AAt" secondAttribute="leading" constant="6" id="iv5-Gu-IOQ" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="firstConstant">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="Fbb-Lt-eiL" firstAttribute="top" secondItem="WVe-q8-aK3" secondAttribute="bottom" constant="12" id="kM4-A2-66P" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="xok-8e-fJk" secondAttribute="trailing" constant="12" id="tha-ur-4LN" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstShadowStyle" value="normal"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="medium"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="drawDateLabel" destination="oR4-Yr-5CZ" id="fvf-o0-PG4"/>
+                                                                <outlet property="pictureImageView" destination="WVe-q8-aK3" id="PVG-J1-GIY"/>
+                                                                <outlet property="prizeLabel" destination="xok-8e-fJk" id="XjL-T2-vJX"/>
+                                                                <outlet property="productLabel" destination="Fbb-Lt-eiL" id="feK-ev-sF6"/>
+                                                                <outlet property="soldOutLabel" destination="Omm-bh-oJo" id="Gld-X9-cMG"/>
+                                                                <outlet property="winChanceLabel" destination="D07-j0-3cl" id="P1P-uE-2av"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="heightConstraint" destination="oHD-9N-f95" id="tOh-SX-hD5"/>
+                                                    </connections>
+                                                </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ls-1K-9B4" userLabel="Winners Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="12" y="394.66666666666663" width="390" height="32.666666666666686"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="extraLarge"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="darkAsset"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="winners"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6rQ-Ld-2KY" userLabel="Winners Collection View" customClass="CollectionView" customModule="Lottery" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="442.66666666666674" width="414" height="282"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="282" id="VDS-wv-EO0" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="dVJ-qn-WY0" userLabel="Flow Layout">
+                                                        <size key="itemSize" width="366" height="250"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusable" id="5L9-Uq-jeY" userLabel="Cell" customClass="WinnerCollectionCell" customModule="Lottery" customModuleProvider="target">
+                                                            <rect key="frame" x="16" y="16" width="366" height="250"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="250"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fe-MC-JIL" userLabel="Congratulations Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="12" y="8.9999999999999982" width="342" height="20.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="semiLarge"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="white"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="congratulations"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuh-9b-tef" userLabel="Foreground View" customClass="View" customModule="Lottery" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="35.333333333333329" width="366" height="214.66666666666669"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbY-c5-bhx" userLabel="Name Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                                <rect key="frame" x="12" y="11.999999999999998" width="342" height="20.333333333333329"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="semiLarge"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTextColor" value="cyan"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-HK-1nb" userLabel="Prize Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                                <rect key="frame" x="12" y="38.333333333333336" width="342" height="19.666666666666664"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testWinner1" translatesAutoresizingMaskIntoConstraints="NO" id="hKY-d2-x3q" userLabel="Picture Image View" customClass="ImageView" customModule="Lottery" customModuleProvider="target">
+                                                                                <rect key="frame" x="12" y="70" width="342" height="75"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="75" id="rK3-w5-NcV" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLo-Qh-v9r" userLabel="Ticket Number Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                                <rect key="frame" x="12" y="157" width="342" height="20.333333333333343"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="semiSmall"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6x-pm-3SH" userLabel="Announced Date Time Label" customClass="Label" customModule="Lottery" customModuleProvider="target">
+                                                                                <rect key="frame" x="12" y="183.33333333333331" width="342" height="20.333333333333343"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstTextAlignment" value="center"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstFont" value="semiSmall"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="testText"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="dbY-c5-bhx" secondAttribute="trailing" constant="12" id="0Jk-DJ-aeW" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="hKY-d2-x3q" secondAttribute="trailing" constant="12" id="6kJ-99-qGY" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="hKY-d2-x3q" firstAttribute="leading" secondItem="tuh-9b-tef" secondAttribute="leading" constant="12" id="8U9-rc-dWr" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="dbY-c5-bhx" firstAttribute="top" secondItem="tuh-9b-tef" secondAttribute="top" constant="12" id="Dlj-CY-wwW" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="U6x-pm-3SH" firstAttribute="top" secondItem="wLo-Qh-v9r" secondAttribute="bottom" constant="6" id="GAV-xn-OYi" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="wLo-Qh-v9r" secondAttribute="trailing" constant="12" id="GXh-fY-eXW" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="wLo-Qh-v9r" firstAttribute="leading" secondItem="tuh-9b-tef" secondAttribute="leading" constant="12" id="H49-1I-Ojt" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="hKY-d2-x3q" firstAttribute="top" secondItem="hUc-HK-1nb" secondAttribute="bottom" constant="12" id="UHt-Hb-wZP" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="hUc-HK-1nb" firstAttribute="leading" secondItem="tuh-9b-tef" secondAttribute="leading" constant="12" id="Ye0-44-jaz" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="hUc-HK-1nb" firstAttribute="top" secondItem="dbY-c5-bhx" secondAttribute="bottom" constant="6" id="g4v-ro-qbD" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="hUc-HK-1nb" secondAttribute="trailing" constant="12" id="oGr-Bd-G8b" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="wLo-Qh-v9r" firstAttribute="top" secondItem="hKY-d2-x3q" secondAttribute="bottom" constant="12" id="tmq-QK-OyE" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="U6x-pm-3SH" secondAttribute="trailing" constant="12" id="vzI-Y8-F4C" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="U6x-pm-3SH" firstAttribute="leading" secondItem="tuh-9b-tef" secondAttribute="leading" constant="12" id="woa-B1-GbL" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                            <constraint firstItem="dbY-c5-bhx" firstAttribute="leading" secondItem="tuh-9b-tef" secondAttribute="leading" constant="12" id="xuV-Fc-FtA" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="medium"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="5fe-MC-JIL" firstAttribute="top" secondItem="5L9-Uq-jeY" secondAttribute="top" constant="9" id="2Me-Pr-y8b" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="5fe-MC-JIL" secondAttribute="trailing" constant="12" id="4Zf-QC-o2h" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="trailing" secondItem="tuh-9b-tef" secondAttribute="trailing" id="IPJ-r6-3RG" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstAttribute="bottom" secondItem="tuh-9b-tef" secondAttribute="bottom" id="OYj-z3-qxb" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="tuh-9b-tef" firstAttribute="top" secondItem="5fe-MC-JIL" secondAttribute="bottom" constant="6" id="VlE-T1-zwF" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="tuh-9b-tef" firstAttribute="leading" secondItem="5L9-Uq-jeY" secondAttribute="leading" id="Z16-c9-5Jl" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                                <constraint firstItem="5fe-MC-JIL" firstAttribute="leading" secondItem="5L9-Uq-jeY" secondAttribute="leading" constant="12" id="sDh-CG-8Oe" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstShadowStyle" value="normal"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstCornerRadius" value="medium"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="firstBackgroundColor" value="primary"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outlet property="announcedDateTimeLabel" destination="U6x-pm-3SH" id="i6M-Mi-OjW"/>
+                                                                <outlet property="congratulationsLabel" destination="5fe-MC-JIL" id="nOc-eu-PLM"/>
+                                                                <outlet property="nameLabel" destination="dbY-c5-bhx" id="w8W-wq-79p"/>
+                                                                <outlet property="pictureImageView" destination="hKY-d2-x3q" id="3iU-ob-Jka"/>
+                                                                <outlet property="prizeLabel" destination="hUc-HK-1nb" id="coU-EO-gaU"/>
+                                                                <outlet property="ticketNumberLabel" destination="wLo-Qh-v9r" id="h9o-4m-q1O"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="heightConstraint" destination="VDS-wv-EO0" id="y2r-cR-ssS"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6rQ-Ld-2KY" firstAttribute="top" secondItem="7Ls-1K-9B4" secondAttribute="bottom" id="EBj-B2-PEb" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="6rQ-Ld-2KY" firstAttribute="leading" secondItem="Yfe-VD-hN6" secondAttribute="leading" id="HvG-6N-cJr" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Ls-1K-9B4" secondAttribute="trailing" constant="12" id="NO6-zN-baB" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="6rQ-Ld-2KY" secondAttribute="trailing" id="VUD-xS-PrA" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="GdS-mk-HMK" firstAttribute="top" secondItem="Yfe-VD-hN6" secondAttribute="top" constant="6" id="Yca-aU-UL1" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="bottom" secondItem="6rQ-Ld-2KY" secondAttribute="bottom" id="d6q-86-h1O" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="7Ls-1K-9B4" firstAttribute="leading" secondItem="Yfe-VD-hN6" secondAttribute="leading" constant="12" id="gd1-uV-4Tz" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="Ld4-GI-x04" firstAttribute="top" secondItem="GdS-mk-HMK" secondAttribute="bottom" id="kR7-rf-fUx" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="7Ls-1K-9B4" firstAttribute="top" secondItem="Ld4-GI-x04" secondAttribute="bottom" constant="6" id="rAF-BK-QdF" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="GdS-mk-HMK" firstAttribute="leading" secondItem="Yfe-VD-hN6" secondAttribute="leading" constant="12" id="ugn-dB-Ckd" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ld4-GI-x04" secondAttribute="trailing" id="vDS-o8-kmg" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstItem="Ld4-GI-x04" firstAttribute="leading" secondItem="Yfe-VD-hN6" secondAttribute="leading" id="whG-Sf-BGA" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                                <constraint firstAttribute="trailing" secondItem="GdS-mk-HMK" secondAttribute="trailing" constant="12" id="yna-6k-lE6" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="soldOutsCollectionView" destination="Ld4-GI-x04" id="rW8-Pz-Pfa"/>
+                                            <outlet property="soldOutsLabel" destination="GdS-mk-HMK" id="EMC-5e-aQ4"/>
+                                            <outlet property="winnersCollectionView" destination="6rQ-Ld-2KY" id="8VE-Hx-CDH"/>
+                                            <outlet property="winnersLabel" destination="7Ls-1K-9B4" id="n3l-rF-fDU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -211,10 +842,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dwP-KJ-sP2" firstAttribute="top" secondItem="h77-Px-0pm" secondAttribute="top" id="0Pu-AZ-JVY"/>
-                            <constraint firstItem="h77-Px-0pm" firstAttribute="trailing" secondItem="dwP-KJ-sP2" secondAttribute="trailing" id="YDu-tS-R16"/>
-                            <constraint firstItem="dwP-KJ-sP2" firstAttribute="leading" secondItem="h77-Px-0pm" secondAttribute="leading" id="bAk-8W-qzf"/>
-                            <constraint firstItem="h77-Px-0pm" firstAttribute="bottom" secondItem="dwP-KJ-sP2" secondAttribute="bottom" id="bhe-mI-Wpd"/>
+                            <constraint firstItem="dwP-KJ-sP2" firstAttribute="top" secondItem="h77-Px-0pm" secondAttribute="top" id="0Pu-AZ-JVY" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                            <constraint firstItem="h77-Px-0pm" firstAttribute="trailing" secondItem="dwP-KJ-sP2" secondAttribute="trailing" id="YDu-tS-R16" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                            <constraint firstItem="dwP-KJ-sP2" firstAttribute="leading" secondItem="h77-Px-0pm" secondAttribute="leading" id="bAk-8W-qzf" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
+                            <constraint firstItem="h77-Px-0pm" firstAttribute="bottom" secondItem="dwP-KJ-sP2" secondAttribute="bottom" id="bhe-mI-Wpd" customClass="FirstConstraint" customModule="Lottery" customModuleProvider="target"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h77-Px-0pm"/>
                     </view>
@@ -233,6 +864,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lastChances1" width="134" height="62.333332061767578"/>
+        <image name="cart" width="24" height="24"/>
+        <image name="decrement" width="18" height="18"/>
+        <image name="favorites" width="24" height="24"/>
+        <image name="testGlobalAd" width="384" height="130"/>
+        <image name="testLastChance1" width="134" height="62.333332061767578"/>
+        <image name="testLottery1" width="400" height="372.66665649414062"/>
+        <image name="testLottery7" width="430.66665649414062" height="333.33334350585938"/>
+        <image name="testWinner1" width="139" height="70"/>
     </resources>
 </document>

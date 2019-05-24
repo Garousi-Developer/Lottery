@@ -27,12 +27,12 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>iranSansMobilePersianNumerals.ttf</string>
+		<string>iranSansMobile.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Tab</string>
+	<string>Tabs</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

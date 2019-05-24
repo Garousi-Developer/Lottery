@@ -12,14 +12,14 @@ class Label: UILabel {
             setBorderStyle(BorderStyle(rawValue: firstBorderStyle)!)
         }
     }
-    @IBInspectable var firstCornerRadius: String! {
-        didSet {
-            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
-        }
-    }
     @IBInspectable var firstMaskedCorners: String! {
         didSet {
             layer.maskedCorners = maskedCornerses(MaskedCorners(rawValue: firstMaskedCorners)!)
+        }
+    }
+    @IBInspectable var firstCornerRadius: String! {
+        didSet {
+            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
         }
     }
     @IBInspectable var firstBackgroundColor: String! {
@@ -32,9 +32,14 @@ class Label: UILabel {
             tintColor = colors(Color(rawValue: firstTintColor)!)
         }
     }
-    @IBInspectable var firstTextAlignment: String = TextAlignment.right.rawValue {
+    @IBInspectable var firstTextAlignment: String = TextAlignment.left.rawValue {
         didSet {
             textAlignment = textAlignments(TextAlignment(rawValue: firstTextAlignment)!)
+        }
+    }
+    @IBInspectable var firstNumberOfLines: Int = 0 {
+        didSet {
+            numberOfLines = firstNumberOfLines
         }
     }
     @IBInspectable var firstFont: String = Font.medium.rawValue {
@@ -56,7 +61,7 @@ class Label: UILabel {
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
-    var firstNumberOfLines: Int {
+    var firstRealNumberOfLines: Int {
         let maxSize = CGSize(width: bounds.width, height: .greatestFiniteMagnitude)
         let textHeight = sizeThatFits(maxSize).height
         let lineHeight = font.lineHeight
@@ -64,12 +69,13 @@ class Label: UILabel {
         
         return firstNumberOfLines
     }
+    var firstIsFirstLayout = true
     
     override var text: String? {
         didSet {
-            if firstNumberOfLines > 1 {
-                setLineSpacing()
-            }
+//            if firstRealNumberOfLines > 1 {
+//                setLineSpacing()
+//            }
         }
     }
     
@@ -86,15 +92,30 @@ class Label: UILabel {
         super.prepareForInterfaceBuilder()
         setup()
     }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if firstIsFirstLayout {
+            firstIsFirstLayout = false
+            
+            if let firstCornerRadius = firstCornerRadius {
+                setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
+            }
+        }
+    }
 }
 
 extension Label {
     private func setup() {
+        clipsToBounds = true
+        
         textAlignment = textAlignments(TextAlignment(rawValue: firstTextAlignment)!)
+        numberOfLines = firstNumberOfLines
         font = fonts(Font(rawValue: firstFont)!)
         textColor = colors(Color(rawValue: firstTextColor)!)
-        text = texts(Text(rawValue: firstText)!)
         
-        numberOfLines = 0
+        if text == "Label" {
+            text = texts(Text(rawValue: firstText)!)
+        }
     }
 }

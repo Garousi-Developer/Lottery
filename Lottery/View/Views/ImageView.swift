@@ -12,14 +12,14 @@ class ImageView: UIImageView {
             setBorderStyle(BorderStyle(rawValue: firstBorderStyle)!)
         }
     }
-    @IBInspectable var firstCornerRadius: String! {
-        didSet {
-            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
-        }
-    }
     @IBInspectable var firstMaskedCorners: String! {
         didSet {
             layer.maskedCorners = maskedCornerses(MaskedCorners(rawValue: firstMaskedCorners)!)
+        }
+    }
+    @IBInspectable var firstCornerRadius: String! {
+        didSet {
+            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
         }
     }
     @IBInspectable var firstBackgroundColor: String! {
@@ -63,6 +63,13 @@ class ImageView: UIImageView {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setup()
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if let firstCornerRadius = firstCornerRadius {
+            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
+        }
     }
 }
 

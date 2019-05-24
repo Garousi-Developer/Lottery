@@ -3,13 +3,13 @@ import UIKit
 func colors(_ color: Color) -> UIColor {
     switch color {
     case .highlightedAsset:
-        return MaterialColors.grey300
-    case .asset:
         return MaterialColors.grey400
-    case .semiDarkAsset:
+    case .lightAsset:
         return MaterialColors.primaryGrey
-    case .darkAsset:
+    case .asset:
         return MaterialColors.grey700
+    case .darkAsset:
+        return MaterialColors.black
     
     case .transparentBlack:
         return colors(.black).withAlphaComponent(0.5)
@@ -19,11 +19,19 @@ func colors(_ color: Color) -> UIColor {
     case .clear:
         return MaterialColors.clear
     
+    case .cyan:
+        return MaterialColors.primaryCyan
+    
     case .disabled:
         return MaterialColors.grey300
     
     case .green:
         return MaterialColors.primaryGreen
+    
+    case .lightGrey:
+        return MaterialColors.grey300
+    case .grey:
+        return MaterialColors.primaryGrey
     
     case .line:
         return MaterialColors.grey200
@@ -31,9 +39,13 @@ func colors(_ color: Color) -> UIColor {
     case .placeholder:
         return MaterialColors.grey200
     
+    case .highlightedPrimary:
+        return MaterialColors.amber100
     case .primary:
         return MaterialColors.primaryAmber
     
+    case .highlightedRed:
+        return MaterialColors.red100
     case .red:
         return MaterialColors.primaryRed
     
@@ -45,8 +57,8 @@ func colors(_ color: Color) -> UIColor {
 }
 enum Color: String {
     case highlightedAsset
+    case lightAsset
     case asset
-    case semiDarkAsset
     case darkAsset
     
     case transparentBlack
@@ -54,16 +66,23 @@ enum Color: String {
     
     case clear
     
+    case cyan
+    
     case disabled
     
     case green
+    
+    case lightGrey
+    case grey
     
     case line
     
     case placeholder
     
+    case highlightedPrimary
     case primary
     
+    case highlightedRed
     case red
     
     case transparentWhite

@@ -28,7 +28,7 @@ extension NavigationBar {
         tintColor = colors(.darkAsset)
         titleTextAttributes = [
             NSAttributedString.Key.font: fonts(.large),
-            NSAttributedString.Key.foregroundColor: colors(.black)
+            NSAttributedString.Key.foregroundColor: colors(.darkAsset)
         ]
         
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [NavigationBar.self]).setTitleTextAttributes(

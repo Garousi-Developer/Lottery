@@ -2,13 +2,16 @@ import UIKit
 
 func textAlignments(_ textAlignment: TextAlignment) -> NSTextAlignment {
     switch textAlignment {
-    case .right:
-        return .right
+    case .left:
+        return .left
     case .center:
         return .center
+    case .right:
+        return .right
     }
 }
 enum TextAlignment: String {
-    case right
+    case left
     case center
+    case right
 }

@@ -8,6 +8,9 @@ class TableController: SecondaryController {
         }
     }
     
+    func numberOfRows() -> Int {
+        return 0
+    }
     func row(forCell cell: TableCell, atIndexPath indexPath: IndexPath) {
         cell.tableController = self
     }
@@ -23,7 +26,12 @@ class TableController: SecondaryController {
 }
 extension TableController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        if self.tableView.firstSimplifying {
+            return data.count
+        }
+        else {
+            return numberOfRows()
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if self.tableView.firstSimplifying {

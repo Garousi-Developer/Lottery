@@ -12,14 +12,14 @@ class CollectionCell: UICollectionViewCell {
             setBorderStyle(BorderStyle(rawValue: firstBorderStyle)!)
         }
     }
-    @IBInspectable var firstCornerRadius: String! {
-        didSet {
-            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
-        }
-    }
     @IBInspectable var firstMaskedCorners: String! {
         didSet {
             layer.maskedCorners = maskedCornerses(MaskedCorners(rawValue: firstMaskedCorners)!)
+        }
+    }
+    @IBInspectable var firstCornerRadius: String! {
+        didSet {
+            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
         }
     }
     @IBInspectable var firstBackgroundColor: String! {
@@ -37,6 +37,7 @@ class CollectionCell: UICollectionViewCell {
     var indexPath: IndexPath {
         return collectionController.collectionView.indexPath(for: self)!
     }
+    var firstIsFirstLayout = true
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -50,6 +51,17 @@ class CollectionCell: UICollectionViewCell {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setup()
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if firstIsFirstLayout {
+            firstIsFirstLayout = false
+            
+            if let firstCornerRadius = firstCornerRadius {
+                setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
+            }
+        }
     }
 }
 

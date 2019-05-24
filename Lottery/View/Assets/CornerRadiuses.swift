@@ -2,15 +2,20 @@ import UIKit
 
 extension UIView {
     func setCornerRadius(_ cornerRadius: CornerRadius) {
+        layer.setCornerRadius(cornerRadius)
+    }
+}
+extension CALayer {
+    func setCornerRadius(_ cornerRadius: CornerRadius) {
         switch cornerRadius {
         case .none:
-            layer.cornerRadius = 0
+            self.cornerRadius = 0
         case .medium:
-            layer.cornerRadius = 12
+            self.cornerRadius = 16
         case .large:
-            layer.cornerRadius = 24
+            self.cornerRadius = 24
         case .half:
-            layer.cornerRadius = min(frame.width, frame.height) / 2
+            self.cornerRadius = min(frame.width, frame.height) / 2
         }
     }
 }

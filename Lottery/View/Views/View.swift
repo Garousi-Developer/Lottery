@@ -12,14 +12,14 @@ class View: UIView {
             setBorderStyle(BorderStyle(rawValue: firstBorderStyle)!)
         }
     }
-    @IBInspectable var firstCornerRadius: String! {
-        didSet {
-            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
-        }
-    }
     @IBInspectable var firstMaskedCorners: String! {
         didSet {
             layer.maskedCorners = maskedCornerses(MaskedCorners(rawValue: firstMaskedCorners)!)
+        }
+    }
+    @IBInspectable var firstCornerRadius: String! {
+        didSet {
+            setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
         }
     }
     @IBInspectable var firstBackgroundColor: String! {
@@ -36,6 +36,8 @@ class View: UIView {
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
+    var firstIsFirstLayout = true
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -48,6 +50,17 @@ class View: UIView {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setup()
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if firstIsFirstLayout {
+            firstIsFirstLayout = false
+            
+            if let firstCornerRadius = firstCornerRadius {
+                setCornerRadius(CornerRadius(rawValue: firstCornerRadius)!)
+            }
+        }
     }
 }
 

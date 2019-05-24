@@ -20,7 +20,7 @@ class PagerView: FSPagerView {
 
 extension PagerView {
     private func setup() {
-        automaticSlidingInterval = 0
+        automaticSlidingInterval = 5
         isInfinite = true
         removesInfiniteLoopForSingleItem = true
     }
